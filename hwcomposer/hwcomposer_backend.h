@@ -55,8 +55,8 @@
 
 // Evaluate "x", if it doesn't return zero, print a warning
 #define HWC_PLUGIN_EXPECT_ZERO(x) \
-    { int res; if ((res = (x)) != 0) \
-        qWarning("QPA-HWC: %s in %s returned %i", (#x), __func__, res); }
+    { /*int res; if ((res = (x)) != 0) \
+        qWarning("QPA-HWC: %s in %s returned %i", (#x), __func__, res); */}
 
 // Evaluate "x", if it isn't NULL, print a warning
 #define HWC_PLUGIN_EXPECT_NULL(x) \
