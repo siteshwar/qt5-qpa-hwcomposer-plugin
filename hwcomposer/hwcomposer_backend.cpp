@@ -80,8 +80,12 @@ HwComposerBackend::create()
     fprintf(stderr, " * Author: %s\n", hwc_module->author);
     fprintf(stderr, "== hwcomposer module ==\n");
 
+    fprintf(stderr, "Opening module\n");
+
     // Open hardware composer device
     HWC_PLUGIN_ASSERT_ZERO(hwc_module->methods->open(hwc_module, HWC_HARDWARE_COMPOSER, &hwc_device));
+
+    fprintf(stderr, "Getting device version\n");
 
     uint32_t version = hwc_device->version;
     if ((version & 0xffff0000) == 0) {
