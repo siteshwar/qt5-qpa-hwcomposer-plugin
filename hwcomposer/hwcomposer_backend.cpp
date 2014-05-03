@@ -132,7 +132,7 @@ HwComposerBackend::create()
 #ifdef HWC_DEVICE_API_VERSION_1_3
         case HWC_DEVICE_API_VERSION_1_3:
             /* kitkat already takes virtual into account so no +1 required */
-            return new HwComposerBackend_v11(hwc_module, hwc_device, HWC_NUM_DISPLAY_TYPES - 1 /*+ 1*/);
+            return new HwComposerBackend_v11(hwc_module, hwc_device, HWC_NUM_DISPLAY_TYPES /*+ 1*/);
             break;
 #endif /* HWC_DEVICE_API_VERSION_1_3 */
 #endif /* HWC_PLUGIN_HAVE_HWCOMPOSER1_API */
