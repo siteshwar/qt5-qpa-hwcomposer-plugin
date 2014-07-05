@@ -129,7 +129,7 @@ HwComposerBackend::create()
         case HWC_DEVICE_API_VERSION_1_3:
 #endif /* HWC_DEVICE_API_VERSION_1_3 */
             /* hwcomposer 1.2 and beyond have virtual displays */
-            return new HwComposerBackend_v11(hwc_module, hwc_device, HWC_NUM_DISPLAY_TYPES + 1);
+            return new HwComposerBackend_v11(hwc_module, hwc_device, HWC_NUM_DISPLAY_TYPES);
             break;
 #endif /* HWC_PLUGIN_HAVE_HWCOMPOSER1_API */
         default:
